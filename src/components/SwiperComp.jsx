@@ -14,6 +14,29 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 function SwiperComp() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+  const imageUrl = [
+    {
+      id: 0,
+      url: "/family.jpeg",
+    },
+    {
+      id: 1,
+      url: "/military.svg",
+    },
+    {
+      id: 2,
+      url: "/military.jpg",
+    },
+    {
+      id: 3,
+      url: "/canon.jpeg",
+    },
+    {
+      id: 4,
+      url: "/usa.webp",
+    },
+  ];
+
   return (
     <>
       <Swiper
@@ -28,38 +51,20 @@ function SwiperComp() {
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
+        className="mySwiper2 !w-[548px] !h-fit !m-0"
       >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
+        {imageUrl.map((image) => (
+          <SwiperSlide
+            className=" !w-[548px] !h-[319px] rounded-[17px] "
+            key={image.id}
+          >
+            <img
+              src={image.url}
+              alt=""
+              className="rounded-[17px] object-center"
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
       <Swiper
         onSwiper={setThumbsSwiper}
@@ -69,38 +74,20 @@ function SwiperComp() {
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
+        className="mySwiper !h-fit  !pt-[17px]"
       >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
+        {imageUrl.map((image) => (
+          <SwiperSlide
+            className="!w-[104px] !h-[103px] !rounded-[19px]"
+            key={image.id}
+          >
+            <img
+              src={image.url}
+              alt=""
+              className="!rounded-[17px] object-cover"
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

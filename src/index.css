@@ -73,11 +73,11 @@
 .mySwiper .swiper-slide {
   width: 25%;
   height: 100%;
-  opacity: 0.8;
 }
 
 .mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
+  border: 3px solid #b6a76c;
+  border-radius: 17px;
 }
 
 .swiper-slide img {

@@ -1,5 +1,7 @@
 // import { SwiperComp } from "../../components";
 
+import { SwiperComp } from "../../components/SwiperComp";
+
 const FuneralEvent = () => {
   return (
     <div className="py-[37px] text-grayColor font-bold">
@@ -39,13 +41,13 @@ const FuneralEvent = () => {
           ></iframe>
         </div>
       </div>
-      {/* <div className="mt-[14px] ">
+      <div className="mt-[14px] grid grid-cols-2 ">
         <div>
-          <h4 className="heading">Images</h4>
+          <h4 className="heading mb-[21px] ">Images</h4>
 
           <SwiperComp />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
