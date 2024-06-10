@@ -18,7 +18,7 @@ const Tribute = () => {
   return (
     <section
       id="main_container"
-      className="!py-[35px] grid grid-cols-[1.5fr_1fr]  "
+      className="!py-[35px] grid grid-cols-[1.3fr_1fr]  "
     >
       <div className="">
         <h4 className="heading !text-[25px]">Tribute</h4>
@@ -43,8 +43,13 @@ const Tribute = () => {
           ))}
         </div>
       </div>
-      <div className=" flex justify-end ">
-        <div className="bg-[rgba(217,217,217,0.8)] py-[23px] px-[27px] rounded-[20px] ">
+      <div className=" flex justify-end  relative z-10">
+        <img
+          src="/tribute_decor.svg"
+          alt=""
+          className="absolute top-[146px] left-[-80px] z-[-50]"
+        />
+        <div className="bg-[rgba(217,217,217,0.8)] py-[23px] px-[27px] rounded-[20px]  ">
           <h6 className="heading text-center pb-[28px]">Send your eTribute</h6>
           <form className="flex flex-col gap-[15px]">
             <input
