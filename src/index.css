@@ -11,6 +11,10 @@
   padding: 0 30px;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 .heading {
   @apply font-bold text-[22px] text-darkBlue;
 }
@@ -57,7 +61,6 @@
 .swiper-slide {
   background-size: cover;
   background-position: center;
- 
 }
 
 .mySwiper2 {
