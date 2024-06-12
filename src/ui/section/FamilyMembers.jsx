@@ -18,8 +18,11 @@ const FamilyMembers = () => {
     },
   ];
   return (
-    <section className="bg-darkBlue py-[35px]">
-      <div className="grid grid-cols-2  gap-[31px] " id="main_container">
+    <section id="family" className="bg-darkBlue py-[35px]">
+      <div
+        className="lg:grid lg:grid-cols-2 gap-[31px] flex flex-col"
+        id="main_container"
+      >
         <div>
           <figure>
             <img src="video-dummy.svg" alt="" className="w-full" />

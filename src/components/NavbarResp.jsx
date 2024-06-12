@@ -1,16 +1,15 @@
 import PropTypes from "prop-types";
 
-const Navbar = ({ navMenu }) => {
+const NavbarResp = ({ navMenu, setNavOpen }) => {
   return (
-    <nav className="hidden lg:block">
-      <ul className="font-bold flex gap-[50px] capitalize">
+    <nav>
+      <ul className="font-bold text-[20px] flex flex-col gap-[50px] capitalize">
         {navMenu.map((item, index) => {
           const hrefId = item.toLowerCase().replace(/\s+/g, "-");
           return (
             <li
-              className={`text-navbar_inactive ${
-                item === "profile" ? "!text-navbar_active" : ""
-              }`}
+              onClick={() => setNavOpen(false)}
+              className={`text-navbar`}
               key={index}
             >
               <a href={`#${hrefId}`}>{item}</a>
@@ -22,8 +21,9 @@ const Navbar = ({ navMenu }) => {
   );
 };
 
-Navbar.propTypes = {
+NavbarResp.propTypes = {
   navMenu: PropTypes.array.isRequired,
+  setNavOpen: PropTypes.bool.isRequired,
 };
 
-export { Navbar };
+export { NavbarResp };

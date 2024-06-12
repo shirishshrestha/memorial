@@ -8,15 +8,17 @@ import {
 
 function App() {
   return (
-    <main>
-      <HeroSection />
-      <section id="main_container">
-        <FuneralEvent />
-      </section>
-      <FamilyMembers />
-      <Tribute />
+    <>
+      <main>
+        <HeroSection />
+        <section id="main_container">
+          <FuneralEvent />
+        </section>
+        <FamilyMembers />
+        <Tribute />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
 

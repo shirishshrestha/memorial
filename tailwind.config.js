@@ -11,6 +11,7 @@ export default {
       darkYellow: "#B6A76C",
       lightBlue: "#7B9BAE",
       grayColor: "#606060",
+      navbarResp: "rgba(217,217,217,90%)",
     },
     extend: {
       fontFamily: {

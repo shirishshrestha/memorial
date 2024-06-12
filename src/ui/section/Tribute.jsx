@@ -18,9 +18,9 @@ const Tribute = () => {
   return (
     <section
       id="main_container"
-      className="!py-[35px] grid grid-cols-[1.3fr_1fr]  "
+      className="!py-[35px] lg:grid lg:grid-cols-[1.3fr_1fr] flex flex-col "
     >
-      <div className="">
+      <div className="" id="tribute">
         <h4 className="heading !text-[25px]">Tribute</h4>
         <div>
           {tribute.map((item, index) => (

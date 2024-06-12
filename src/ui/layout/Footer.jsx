@@ -1,9 +1,12 @@
 const Footer = () => {
   return (
     <footer className="bg-darkBlue py-[43px]">
-      <div id="main_container" className="flex justify-between">
+      <div
+        id="main_container"
+        className="flex justify-between lg:flex-row flex-col-reverse items-center text-center lg:items-start lg:text-start gap-[43px] lg:gap-0"
+      >
         <div>
-          <div className="flex items-center gap-[1rem]">
+          <div className="flex lg:flex-row flex-col items-center gap-[1rem]">
             <h6 className="text-[25px] font-bold">Share this Page</h6>
             <div className="flex gap-[14px] ">
               <a href="#" target="_blank">
@@ -36,7 +39,7 @@ const Footer = () => {
             <div className="bg-darkYellow p-[10px] rounded-[10px] w-fit">
               <p className="font-bold text-[20px] ">DA</p>
             </div>
-            <div className="font-bold text-[18px]">
+            <div className="font-bold text-[18px] text-start">
               <p>Daphne Adilistyle Callumkon</p>
               <p className="text-darkYellow">
                 Adilistyle_Danphe89880@gmail.com
