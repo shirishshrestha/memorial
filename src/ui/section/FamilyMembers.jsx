@@ -1,3 +1,5 @@
+import { Pagination } from "../../components/Pagination";
+
 const FamilyMembers = () => {
   const familyMembers = [
     {
@@ -24,34 +26,69 @@ const FamilyMembers = () => {
         id="main_container"
       >
         <div>
-          <figure>
-            <img src="video-dummy.svg" alt="" className="w-full" />
-          </figure>
-          <div className="mt-[23px]">
-            <h4 className=" text-[25px] font-bold mb-[21px]">Videos</h4>
-            <figure className="flex justify-between">
-              <img src="/dummy-1.svg" alt="" />
-              <img src="/dummy-2.svg" alt="" />
-              <img src="/dummy-3.svg" alt="" />
-            </figure>
+          <iframe
+            height="175"
+            src="https://www.youtube.com/embed/a3ICNMQW7Ok?si=rTfmAQXyKDPWyl7Q"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            className="w-full rounded-[17px]"
+          ></iframe>
+          <div className="mt-[23px] w-full">
+            <h4 className=" text-[30px] lg:text-[25px] font-bold mb-[21px]">
+              Videos
+            </h4>
+            <div className="flex justify-between ">
+              <iframe
+                src="https://www.youtube.com/embed/a3ICNMQW7Ok?si=rTfmAQXyKDPWyl7Q"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                className=" rounded-[17px] w-[32%]"
+              ></iframe>
+              <iframe
+                src="https://www.youtube.com/embed/a3ICNMQW7Ok?si=rTfmAQXyKDPWyl7Q"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                className=" rounded-[17px] w-[32%]"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                src="https://www.youtube.com/embed/a3ICNMQW7Ok?si=rTfmAQXyKDPWyl7Q"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                className=" rounded-[17px] w-[32%]"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <Pagination className="mt-[33px]" />
           </div>
         </div>
         <div>
-          <h4 className=" text-[25px] font-bold mb-[21px]">Family Members</h4>
+          <h4 className="text-[30px] lg:text-[25px] font-bold mb-[21px]">
+            Family Members
+          </h4>
           {familyMembers.map((member, index) => (
             <div
-              className="flex items-start gap-[10px] font-bold pb-[36px]"
+              className="flex items-start gap-[10px] font-bold lg:pb-[36px] pb-[32px]"
               key={index}
             >
               <figure className="py-[7px]">
                 <img src="/bullet.svg" alt="" />
               </figure>
               <div>
-                <p className="text-[1rem]">{member.name}</p>
-                <p className="text-darkYellow text-[1rem]">{member.relation}</p>
+                <p className="lg:text-[1rem] text-[22px]">{member.name}</p>
+                <p className="text-darkYellow lg:text-[1rem] text-[22px]">
+                  {member.relation}
+                </p>
               </div>
             </div>
           ))}
+          <Pagination />
         </div>
       </div>
     </section>

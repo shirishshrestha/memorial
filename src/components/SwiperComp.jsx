@@ -74,7 +74,7 @@ function SwiperComp() {
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper w-full !h-fit  !pt-[17px] "
+        className="mySwiper !w-full !h-fit  !pt-[17px] "
       >
         {imageUrl.map((image) => (
           <SwiperSlide

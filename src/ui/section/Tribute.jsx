@@ -1,3 +1,5 @@
+import { Pagination } from "../../components";
+
 const Tribute = () => {
   const tribute = [
     {
@@ -18,7 +20,7 @@ const Tribute = () => {
   return (
     <section
       id="main_container"
-      className="!py-[35px] lg:grid lg:grid-cols-[1.3fr_1fr] flex flex-col "
+      className="!py-[35px] lg:grid lg:grid-cols-[1.3fr_1fr] flex flex-col overflow-hidden"
     >
       <div className="" id="tribute">
         <h4 className="heading !text-[25px]">Tribute</h4>
@@ -26,47 +28,57 @@ const Tribute = () => {
           {tribute.map((item, index) => (
             <div key={index} className="font-bold mt-[20px] mb-[28px]">
               <figure className="flex gap-[12px] items-center mb-[22px]">
-                <img src={item.image} alt="location_icon" />
+                <img
+                  src={item.image}
+                  alt="location_icon"
+                  className="lg:w-auto lg:h-auto w-[78px] "
+                />
                 <figcaption>
-                  <p className="text-grayColor font-bold text-[18px]">
+                  <p className="text-grayColor font-bold lg:text-[18px] text-[22px]">
                     {item.name}
                   </p>
-                  <p className="text-[#8D8D8D] font-medium text-[1rem]">
+                  <p className="text-[#8D8D8D]  font-medium lg:text-[1rem] text-[18px]">
                     {item.email}
                   </p>
                 </figcaption>
               </figure>
-              <p className="text-[1rem] font-medium text-[#8D8D8D]">
+              <p className="lg:text-[1rem] text-[18px] font-medium text-[#8D8D8D]">
                 {item.message}
               </p>
             </div>
           ))}
         </div>
+        <Pagination />
       </div>
-      <div className=" flex justify-end  relative z-10">
+      <div className=" flex justify-end  relative z-10 pb-[20px] lg:pb-0">
         <img
           src="/tribute_decor.svg"
           alt=""
-          className="absolute top-[146px] left-[-80px] z-[-50]"
+          className="absolute lg:block hidden lg:top-[146px] lg:left-[-50px] lg:z-[-50] -top-[124px] -right-[120px]  "
         />
-        <div className="bg-[rgba(217,217,217,0.8)] py-[23px] px-[27px] rounded-[20px]  ">
+        <img
+          src="/tribute-decor2.svg"
+          alt=""
+          className="absolute lg:hidden -top-[124px] -right-[40px]  "
+        />
+        <div className="bg-[rgba(217,217,217,0.8)] py-[23px] px-[27px] rounded-[20px] w-full lg:w-auto mt-[60px] lg:mt-0 ">
           <h6 className="heading text-center pb-[28px]">Send your eTribute</h6>
-          <form className="flex flex-col gap-[15px]">
+          <form className="flex flex-col gap-[15px] text-[22px]">
             <input
               type="text"
               placeholder="Your Name"
-              className="input"
+              className="input text-[22px] lg:text-[15px]"
               required
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="input"
+              className="input  text-[22px] lg:text-[15px]"
               required
             />
             <select
               name="relation"
-              className={` input focus:outline-none text-darkBlue `}
+              className={` input focus:outline-none text-darkBlue  text-[22px] lg:text-[15px] `}
             >
               <option className="!text-[#b4b4b4]" value="" selected disabled>
                 Select Relationship
@@ -79,7 +91,7 @@ const Tribute = () => {
             <input
               type="text"
               placeholder="Subject"
-              className="input"
+              className="input  text-[22px] lg:text-[15px]"
               required
             />
             <textarea
@@ -88,7 +100,7 @@ const Tribute = () => {
               cols="30"
               rows="6"
               placeholder="Your Message"
-              className="input"
+              className="input  text-[22px] lg:text-[15px]"
               required
             ></textarea>
             <button

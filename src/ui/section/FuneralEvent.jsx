@@ -8,7 +8,7 @@ const FuneralEvent = () => {
       <div className="flex lg:gap-[145px] l gap-[32px] lg:flex-row flex-col ">
         <div>
           <h4 className="heading">Funeral Event</h4>
-          <figure className="flex gap-[15px] items-center mt-[17px] mb-[15px]">
+          <figure className="flex gap-[15px] items-center mt-[17px] mb-[15px] lg:text-[1rem] text-[22px]">
             <img src="/location.svg" alt="location_icon" />
             <figcaption>
               Conducted at Holy Cemetery, Street
@@ -18,7 +18,7 @@ const FuneralEvent = () => {
               </span>
             </figcaption>
           </figure>
-          <figure className="flex gap-[15px] items-center ">
+          <figure className="flex gap-[15px] items-center lg:text-[1rem] text-[22px] ">
             <img src="/calendar.svg" alt="location_icon" />
             <figcaption>31/05/2024 04:52 am</figcaption>
           </figure>
@@ -26,7 +26,7 @@ const FuneralEvent = () => {
         <div className="flex gap-[1rem] lg:flex-row flex-col" id="images">
           <div>
             <h4 className="heading">Grave Details</h4>
-            <figure className="flex gap-[15px] items-center mt-[17px] mb-[15px]">
+            <figure className="flex gap-[15px] lg:text-[1rem] text-[22px] items-center mt-[17px] mb-[15px]">
               <img src="/alarm.svg" alt="location_icon" />
               <figcaption>
                 Blessed Holy Cemetery, Austin,665080 Texas, Norhingtam, USA
@@ -47,6 +47,16 @@ const FuneralEvent = () => {
           <h4 className="heading mb-[21px] ">Images</h4>
 
           <SwiperComp />
+        </div>
+        <div>
+          <h4 className="heading mb-[21px]">Eulogy</h4>
+          <div className="h-[648px] lg:h-[87%] p-[4px] rounded-[20px] bg-darkYellow scrollbar !pb-[42px] ">
+            <iframe
+              src="/samplepdf.pdf#toolbar=0"
+              width="100%"
+              className="h-full rounded-[17px] bg-darkYellow "
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
