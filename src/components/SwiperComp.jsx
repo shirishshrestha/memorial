@@ -51,11 +51,11 @@ function SwiperComp() {
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2 !w-full lg:!w-[558px] !h-[373px] lg:!h-fit !m-0"
+        className="mySwiper2 !w-full lg:!w-[500px] xl:!w-[558px] md:!h-[373px] h-[229px] lg:!h-fit !m-0"
       >
         {imageUrl.map((image) => (
           <SwiperSlide
-            className=" !w-full lg:!w-[558px] lg:!h-[319px] rounded-[17px] "
+            className=" !w-full lg:!w-[500px] xl:!w-[558px] lg:!h-[319px] h-[229px] md:!h-[373px] rounded-[17px] "
             key={image.id}
           >
             <img
@@ -78,7 +78,7 @@ function SwiperComp() {
       >
         {imageUrl.map((image) => (
           <SwiperSlide
-            className="lg:!w-[104px] lg:!h-[103px] !h-[121px] !w-[121px] !rounded-[19px] "
+            className="lg:!w-[92px] lg:!h-[91px] xl:!w-[104px] xl:!h-[103px] md:!h-[121px] !h-[74.26px] md:!w-[121px] !w-[74.87px] !rounded-[19px] "
             key={image.id}
           >
             <img

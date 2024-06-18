@@ -1,14 +1,15 @@
 // import { SwiperComp } from "../../components";
 
+import { Link } from "react-router-dom";
 import { SwiperComp } from "../../components/SwiperComp";
 
 const FuneralEvent = () => {
   return (
     <div id="funeral-event" className="py-[37px] text-grayColor font-bold">
-      <div className="flex lg:gap-[145px] l gap-[32px] lg:flex-row flex-col ">
+      <div className="flex xl:gap-[145px] l gap-[32px] lg:flex-row flex-col ">
         <div>
           <h4 className="heading">Funeral Event</h4>
-          <figure className="flex gap-[15px] items-center mt-[17px] mb-[15px] lg:text-[1rem] text-[22px]">
+          <figure className="flex gap-[15px] items-center mt-[17px] mb-[15px] lg:text-[1rem] md:text-[22px] text-[15px]">
             <img src="/location.svg" alt="location_icon" />
             <figcaption>
               Conducted at Holy Cemetery, Street
@@ -18,7 +19,7 @@ const FuneralEvent = () => {
               </span>
             </figcaption>
           </figure>
-          <figure className="flex gap-[15px] items-center lg:text-[1rem] text-[22px] ">
+          <figure className="flex gap-[15px] items-center lg:text-[1rem] md:text-[22px] text-[15px] ">
             <img src="/calendar.svg" alt="location_icon" />
             <figcaption>31/05/2024 04:52 am</figcaption>
           </figure>
@@ -26,7 +27,7 @@ const FuneralEvent = () => {
         <div className="flex gap-[1rem] lg:flex-row flex-col" id="images">
           <div>
             <h4 className="heading">Grave Details</h4>
-            <figure className="flex gap-[15px] lg:text-[1rem] text-[22px] items-center mt-[17px] mb-[15px]">
+            <figure className="flex gap-[15px] lg:text-[1rem] md:text-[22px] text-[15px] items-center mt-[17px] mb-[15px]">
               <img src="/alarm.svg" alt="location_icon" />
               <figcaption>
                 Blessed Holy Cemetery, Austin,665080 Texas, Norhingtam, USA
@@ -38,19 +39,29 @@ const FuneralEvent = () => {
             allowfullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="rounded-[20px] h-[306px] lg:w-[280px] lg:h-[160px] border-none focus:outline-none"
+            className="rounded-[20px] h-[188px] md:h-[306px] lg:w-[240px] xl:w-[280px] lg:h-[160px] border-none focus:outline-none"
           ></iframe>
         </div>
       </div>
-      <div className="mt-[14px] flex flex-col lg:grid lg:grid-cols-2  ">
+      <div className="mt-[14px] flex flex-col lg:grid lg: grid-cols-[1.5fr_1.25fr] xl:grid-cols-2  ">
         <div>
-          <h4 className="heading mb-[21px] ">Images</h4>
+          <div className="flex items-center justify-between mb-[21px]">
+            <h4 className="text-[20px] md:text-[30px] lg:text-[25px] font-bold ">
+              Images
+            </h4>
+            <Link to="/images">
+              <button className="flex lg:pr-[35px] xl:pr-[50px] gap-[6px] items-center text-[18px] font-semibold text-darkYellow ">
+                See all
+                <img src="/eye.svg" alt="eye-icon" />
+              </button>
+            </Link>
+          </div>
 
           <SwiperComp />
         </div>
-        <div>
+        <div id="eulogy">
           <h4 className="heading mb-[21px]">Eulogy</h4>
-          <div className="h-[648px] lg:h-[87%] p-[4px] rounded-[20px] bg-darkYellow scrollbar !pb-[42px] ">
+          <div className="h-[315.06px] md:h-[648px] lg:h-[87%] p-[4px] rounded-[20px] bg-darkYellow scrollbar !pb-[42px] ">
             <iframe
               src="/samplepdf.pdf#toolbar=0"
               width="100%"

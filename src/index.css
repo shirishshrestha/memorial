@@ -21,8 +21,19 @@
   }
 }
 
+@media (width < 500px) {
+  #main_container {
+    padding: 0 18px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 35px;
+  }
+}
+
 .heading {
-  @apply font-bold text-[30px] lg:text-[22px] text-darkBlue;
+  @apply font-bold text-[20px] md:text-[30px] lg:text-[22px] text-darkBlue;
 }
 
 .input {

@@ -1,32 +1,33 @@
 import { useState } from "react";
 import { Navbar, NavbarResp } from "../../components";
+import PropTypes from "prop-types";
 import { CrossSvg, MenuSvg } from "../../components/Svg";
 
-const Header = () => {
+const Header = ({ className }) => {
   const [navOpen, setNavOpen] = useState(false);
 
   const handleNavbarToggle = () => {
     setNavOpen(!navOpen);
   };
   return (
-    <header className=" lg:bg-navbar">
+    <header className={`${className} lg:bg-navbar`}>
       <div
         className="!py-[1rem] relative items-center flex justify-between"
         id="main_container"
       >
         <div className="lg:hidden"></div>
         <Navbar navMenu={["profile", "funeral event", "images"]} />
-        <figure className="rounded-full lg:p-[4px] lg:bg-navbar lg:absolute lg:left-[50%] lg:top-0 top-[23px] w-fit">
+        <figure className="rounded-full lg:p-[4px] lg:bg-navbar lg:absolute lg:left-[45%] lg:top-0 top-[23px] w-fit">
           <img
             src="/nav_image.svg"
             alt="navbar_image"
-            className="rounded-full w-[104px] "
+            className="rounded-full w-[76px] lg:w-[74px] md:w-[104px] ml-[25px] lg:ml-0"
           />
         </figure>
         <Navbar navMenu={["family", "tribute"]} />
 
         <div
-          className={`absolute bg-navbarResp px-[70px]  h-auto rounded-[14px] z-40 right-[48px] top-[89px] items-center py-[70px] text-center justify-center lg:hidden ${
+          className={`absolute bg-navbarResp px-[70px]  h-auto rounded-[14px] z-40 md:right-[48px] right-[20px] top-[89px] items-center py-[40px] md:py-[70px] text-center justify-center lg:hidden ${
             navOpen ? "flex" : "hidden"
           } `}
         >
@@ -54,6 +55,10 @@ const Header = () => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  className: PropTypes.string,
 };
 
 export default Header;

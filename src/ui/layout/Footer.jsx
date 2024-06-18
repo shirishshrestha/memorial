@@ -7,25 +7,41 @@ const Footer = () => {
       >
         <div>
           <div className="flex lg:flex-row flex-col items-center gap-[1rem]">
-            <h6 className="text-[30px] lg:text-[25px] font-bold">
+            <h6 className="text-[20px] md:text-[30px] lg:text-[25px] font-bold">
               Share this Page
             </h6>
             <div className="flex gap-[14px] ">
               <a href="#" target="_blank">
-                <img src="/facebook.svg" alt="facebook" />
+                <img
+                  src="/facebook.svg"
+                  alt="facebook"
+                  className="h-[47px] w-[47px] md:h-auto md:w-auto"
+                />
               </a>
               <a href="#" target="_blank">
-                <img src="/twitter.svg" alt="twitter" />
+                <img
+                  src="/twitter.svg"
+                  alt="twitter"
+                  className="h-[47px] w-[47px] md:h-auto md:w-auto"
+                />
               </a>
               <a href="#" target="_blank">
-                <img src="/whatsapp.svg" alt="instagram" />
+                <img
+                  src="/whatsapp.svg"
+                  alt="instagram"
+                  className="h-[47px] w-[47px] md:h-auto md:w-auto"
+                />
               </a>
               <a href="#" target="_blank">
-                <img src="/linkedin.svg" alt="linkedin" />
+                <img
+                  src="/linkedin.svg"
+                  alt="linkedin"
+                  className="h-[47px] w-[47px] md:h-auto md:w-auto"
+                />
               </a>
             </div>
           </div>
-          <div className="text-darkYellow  text-[22px] lg:text-[1rem] font-medium max-w-[504px] mt-[8px]">
+          <div className="text-darkYellow text-[15px] md:text-[22px] lg:text-[1rem] font-medium max-w-[504px] mt-[8px]">
             <p>
               Invite friends and family to access your loved one&apos;s eTribute
               page to share their heartfelt messages
@@ -34,16 +50,16 @@ const Footer = () => {
         </div>
 
         <div>
-          <h6 className="font-bold text-[30px] lg:text-[25px] mb-[15px]">
+          <h6 className="font-bold text-[20px] md:text-[30px] lg:text-[25px] mb-[15px]">
             Page Administrator
           </h6>
-          <div className="flex gap-[11px]">
-            <div className="bg-darkYellow p-[10px] rounded-[10px] w-fit flex items-center">
+          <div className="flex gap-[11px] items-center">
+            <div className="bg-darkYellow p-[10px] rounded-[10px] w-fit h-fit flex items-center">
               <p className="font-bold text-[20px] ">DA</p>
             </div>
-            <div className="font-bold lg:text-[18px] text-[22px] text-start">
+            <div className="font-bold lg:text-[18px] md:text-[22px] text-[15px] text-start">
               <p>Daphne Adilistyle Callumkon</p>
-              <p className="text-darkYellow text-[18px] lg:text-[1rem]">
+              <p className="text-darkYellow md:text-[18px]  lg:text-[1rem]">
                 Adilistyle_Danphe89880@gmail.com
               </p>
             </div>

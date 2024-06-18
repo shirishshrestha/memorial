@@ -12,7 +12,7 @@ const Pagination = ({ className }) => {
       >
         <img src="/prev-page.svg" alt="" />
       </button>
-      <p className="text-darkYellow font-semibold text-[18px]">
+      <p className="text-darkYellow font-semibold text-[15px] md:text-[18px]">
         Page {page} of 5
       </p>
       <button

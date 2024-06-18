@@ -27,22 +27,22 @@ const Tribute = () => {
         <div>
           {tribute.map((item, index) => (
             <div key={index} className="font-bold mt-[20px] mb-[28px]">
-              <figure className="flex gap-[12px] items-center mb-[22px]">
+              <figure className="flex gap-[12px] items-center md:mb-[22px] mb-[12px]">
                 <img
                   src={item.image}
                   alt="location_icon"
-                  className="lg:w-auto lg:h-auto w-[78px] "
+                  className="lg:w-auto lg:h-auto md:w-[78px] w-[62px] "
                 />
                 <figcaption>
-                  <p className="text-grayColor font-bold lg:text-[18px] text-[22px]">
+                  <p className="text-grayColor font-bold lg:text-[18px] md:text-[22px] text-[15px]">
                     {item.name}
                   </p>
-                  <p className="text-[#8D8D8D]  font-medium lg:text-[1rem] text-[18px]">
+                  <p className="text-[#8D8D8D]  font-medium lg:text-[1rem] md:text-[18px] text-[15px]">
                     {item.email}
                   </p>
                 </figcaption>
               </figure>
-              <p className="lg:text-[1rem] text-[18px] font-medium text-[#8D8D8D]">
+              <p className="lg:text-[1rem] md:text-[18px] text-[15px] font-medium text-[#8D8D8D]">
                 {item.message}
               </p>
             </div>
@@ -54,12 +54,12 @@ const Tribute = () => {
         <img
           src="/tribute_decor.svg"
           alt=""
-          className="absolute lg:block hidden lg:top-[146px] lg:left-[-50px] lg:z-[-50] -top-[124px] -right-[120px]  "
+          className="absolute lg:block hidden lg:top-[146px] xl:left-[-50px] lg:left-[-145px] lg:z-[-50] -top-[124px] -right-[120px] "
         />
         <img
           src="/tribute-decor2.svg"
           alt=""
-          className="absolute lg:hidden -top-[124px] -right-[40px]  "
+          className="absolute lg:hidden md:-top-[124px] -top-[95px] md:-right-[40px] -right-[45px]  h-[251px] w-[254.69px] md:h-auto md:w-auto "
         />
         <div className="bg-[rgba(217,217,217,0.8)] py-[23px] px-[27px] rounded-[20px] w-full lg:w-auto mt-[60px] lg:mt-0 ">
           <h6 className="heading text-center pb-[28px]">Send your eTribute</h6>
@@ -67,18 +67,18 @@ const Tribute = () => {
             <input
               type="text"
               placeholder="Your Name"
-              className="input text-[22px] lg:text-[15px]"
+              className="input md:text-[22px] text-[16px] lg:text-[15px]"
               required
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="input  text-[22px] lg:text-[15px]"
+              className="input  md:text-[22px] text-[16px] lg:text-[15px]"
               required
             />
             <select
               name="relation"
-              className={` input focus:outline-none text-darkBlue  text-[22px] lg:text-[15px] `}
+              className={` input focus:outline-none text-darkBlue  md:text-[22px] text-[16px] lg:text-[15px] `}
             >
               <option className="!text-[#b4b4b4]" value="" selected disabled>
                 Select Relationship
@@ -91,7 +91,7 @@ const Tribute = () => {
             <input
               type="text"
               placeholder="Subject"
-              className="input  text-[22px] lg:text-[15px]"
+              className="input  md:text-[22px] text-[16px] lg:text-[15px]"
               required
             />
             <textarea
@@ -100,7 +100,7 @@ const Tribute = () => {
               cols="30"
               rows="6"
               placeholder="Your Message"
-              className="input  text-[22px] lg:text-[15px]"
+              className="input  md:text-[22px] text-[16px] lg:text-[15px]"
               required
             ></textarea>
             <button
