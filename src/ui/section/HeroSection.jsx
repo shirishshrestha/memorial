@@ -89,7 +89,7 @@ const HeroSection = () => {
             </table>
           </div>
         </div>
-        <div className="flex gap-[14px] items-center justify-center lg:justify-start pb-[22px] mt-[30px] lg:pb-[36px] lg:mt-[32px]">
+        <div className="flex lg:gap-[14px] gap-[16px] items-center justify-center lg:justify-start pb-[22px] mt-[30px] lg:pb-[36px] lg:mt-[32px]">
           <a href="#" target="_blank">
             <img src="/fb-icon.svg" alt="icon" />
           </a>
