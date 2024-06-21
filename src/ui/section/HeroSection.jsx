@@ -30,8 +30,8 @@ const HeroSection = () => {
   return (
     <section className="bg-left-bottom lg:bg-center bg-[url(/background.svg)] md:bg-[url(/bg-mobile-landing.svg)] lg:bg-[url(/bg_landing.svg)] md:bg-right xl:bg-center h-auto bg-no-repeat w-full bg-cover">
       <Header />
-      <div id="main_container" className="relative">
-        <div className="lg:pt-[92px] lg:pb-[86px] pt-[36px] flex flex-col lg:flex-row items-center lg:items-start lg:justify-between ">
+      <div id="main_container" className="relative ">
+        <div className="lg:pt-[92px] pt-[36px] flex flex-col lg:flex-row items-center lg:items-start lg:justify-between ">
           <div className="text-center lg:text-start">
             <h1 className="font-great-vibes text-[32px] md:text-[50px] lg:text-[42px] lg:mb-[28px] mb-[11px] ">
               In the Loving Memory of
@@ -74,7 +74,7 @@ const HeroSection = () => {
               className="absolute w-[100vh] inset-0 !top-[150px] z-[10] md:hidden min-[500px]:!top-[70px]"
             />
           </div>
-          <div className="lg:hidden relative z-30 mb-[53px] w-full px:[6px] md:px-[21px]">
+          <div className="lg:hidden relative z-30 w-full px:[6px] md:px-[21px]">
             <table className="mt-[67px] md:mt-[105px] w-full">
               {details.map((item, index) => (
                 <tr key={index}>
@@ -88,6 +88,17 @@ const HeroSection = () => {
               ))}
             </table>
           </div>
+        </div>
+        <div className="flex gap-[14px] items-center justify-center lg:justify-start pb-[22px] mt-[30px] lg:pb-[36px] lg:mt-[32px]">
+          <a href="#" target="_blank">
+            <img src="/fb-icon.svg" alt="icon" />
+          </a>
+          <a href="#" target="_blank">
+            <img src="/insta-icon.svg" alt="icon" />
+          </a>
+          <a href="#" target="_blank">
+            <img src="/twitter-icon.svg" alt="icon" />
+          </a>
         </div>
       </div>
     </section>
